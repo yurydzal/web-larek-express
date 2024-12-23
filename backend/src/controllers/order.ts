@@ -29,7 +29,7 @@ const createOrder = (req: Request, res: Response, next: NextFunction) => {
         return next(new BadRequestError('Сумма заказа не соответствует сумме стоимости товаров'));
       }
 
-      return res.status(200).json({ id: orderId, total: checkPrice });
+      return res.status(201).json({ id: orderId, total: checkPrice });
     })
     .catch((err) => next(err));
 };

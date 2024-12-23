@@ -23,6 +23,6 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 
-app.listen(3000, () => {
+app.listen(config.port, () => {
   console.log(`listening port: ${config.port}`);
 });
